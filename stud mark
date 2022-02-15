@@ -1,0 +1,140 @@
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+ class Student
+ {
+   private:
+     int rollno, science, maths, english, social, computer, hindi;
+     char name[20];
+    public:
+     void Get()
+     {
+         cout<<"\nEnter your rollno.:";
+         cin>> rollno;
+         cout<<"\nEnter your name:";
+         cin>> name;
+         cout<<"\nEnter marks for science:";
+         cin>> science;
+         cout<<"\nEnter marks for maths:";
+         cin>> maths;
+         cout<<"\nEnter marks for english:";
+         cin>> english;
+         cout<<"\nEnter marks for social:";
+         cin>> social;
+         cout<<"\nEnter marks for computer:";
+         cin>> computer;
+         
+     }
+     void Display()
+     {
+         cout<<"/n/n/t/tMarks"<<endl;
+         cout<<"\nRollno."<< rollno;
+         cout<<"\nName"<< name;
+         cout<<"\n\nMarks in science:"<< science;
+         cout<<"\nMarks in maths:"<< maths;
+         cout<<"\nMarks in english:"<< english;
+         cout<<"\nMarks in social:"<< social;
+         cout<<"\nMarks in computer:"<< computer;
+         
+     }
+     void Insert()
+      {
+          cout<<"\nEnter marks for hindi";
+          cin>> hindi;
+          cout<<"1)Science:"<<science<<"\n";
+          cout<<"2)Maths:"<<maths<<"\n";
+          cout<<"3)English:"<<english<<"\n";
+          cout<<"4)Social:"<<social<<"\n";
+          cout<<"5)Computer:"<<computer<<"\n";
+          cout<<"6)Hindi:"<<hindi<<"\n";
+      }
+      void Delete()
+      {
+          int deletechoice;
+          cout<<"Which marks you have to delete?";
+          cout<<"1)Science:" <<science<<"\n";
+          cout<<"2)Maths:"<<maths<<"\n";
+          cout<<"3)English:"<<english<<"\n";
+          cout<<"4)Social:" <<social<<"\n";
+          cout<<"5)Computer:"<<computer<<"\n";
+          cout<<"Enter your choice:";
+          cin >> deletechoice;
+          switch (deletechoice)
+          {
+              case 1:
+              cout<<"1)Maths:"<<maths<<"\n";
+              cout<<"2)English:"<<english<<"\n";
+              cout<<"3)Social:"<<social<<"\n";
+              cout<<"4)Computer:"<<computer<<"\n";
+              break;
+              
+              case 2:
+              cout<<"1)Science:"<<science<<"\n";
+              cout<<"2)English:"<<english<<"\n";
+              cout<<"3)Social:"<<social<<"\n";
+              cout<<"4)Computer:"<<computer<<"\n";
+              break;
+              
+              case 3:
+              cout<<"1)Science:"<<science<<"\n";
+              cout<<"2)Maths:"<<maths<<"\n";
+              cout<<"3)Social:"<<social<<"\n";
+              cout<<"4)Computer:"<<computer<<"\n";
+              break;
+              
+              case 4:
+              cout<<"1)Science:"<<science<<"\n";
+              cout<<"2)Maths:"<<maths<<"\n";
+              cout<<"3)English:"<<english<<"\n";
+              cout<<"4)Computer:"<<computer<<"\n";
+              break;
+              
+              case 5:
+              cout<<"1)Science:"<<science<<"\n";
+              cout<<"2)Maths:"<<maths<<"\n";
+              cout<<"3)English:"<<english<<"\n";
+              cout<<"4)Social:"<<social<<"\n";
+              break;
+              default:
+              cout<<"Invalid choice";
+             
+          }
+      }
+      };
+       int main()
+       {
+           Student stud;
+           stud.Get();
+           int choice;
+              cout<<"Select your choice";
+              cout<<"1.insert marks\n1. 2.display marks\n2. 3.delete marks\n3";
+              cin >> choice;
+              switch(choice)
+              {
+                  case 1:
+                  cout<<"You have selected insert mark option";
+                  stud.Insert();
+                  break;
+                  
+                  case 2:
+                  stud.Display();
+                  break;
+                  
+                  case 3:
+                  stud.Delete();
+                  break;
+                  
+                  default:
+                  cout<<"Invalid choice";
+                  break;
+              }
+              return 0;
+       }
+      
+     
+        
+ 
+
+
